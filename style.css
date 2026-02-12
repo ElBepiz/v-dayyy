@@ -18,7 +18,7 @@ body {
         radial-gradient(circle at 50% 50%, #fff0f3 0%, transparent 60%);
 }
 
-/* Floating hearts background - MIGLIORATO CON PIÙ ANIMAZIONI */
+/* Floating hearts background */
 .hearts-bg {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -27,8 +27,8 @@ body {
     overflow: hidden;
 }
 
-/* Cuori che salgono da sinistra */
-.hearts-bg::before {
+.hearts-bg::before,
+.hearts-bg::after {
     content: '💕 💗 💖 💝 💓';
     position: absolute;
     font-size: 1.5rem;
@@ -39,158 +39,15 @@ body {
     left: 10%;
 }
 
-/* Cuori che salgono dal centro */
 .hearts-bg::after {
-    content: '💗 💕 💓 💖 💝';
-    position: absolute;
-    font-size: 1.5rem;
-    opacity: 0.15;
-    animation: floatHearts 12s linear infinite;
     animation-delay: 6s;
-    white-space: nowrap;
-    top: 100%;
     left: 60%;
+    content: '💗 💕 💓 💖 💝';
 }
 
-/* Cuori che cadono dall'alto */
-.hearts-bg-falling {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    pointer-events: none;
-    z-index: 0;
-    overflow: hidden;
-}
-
-.hearts-bg-falling::before {
-    content: '❤️ 💖 💝';
-    position: absolute;
-    font-size: 2rem;
-    opacity: 0.2;
-    animation: fallHearts 15s linear infinite;
-    white-space: nowrap;
-    top: -10%;
-    left: 20%;
-}
-
-.hearts-bg-falling::after {
-    content: '💕 💗 💓';
-    position: absolute;
-    font-size: 1.8rem;
-    opacity: 0.18;
-    animation: fallHearts 18s linear infinite;
-    animation-delay: 7s;
-    white-space: nowrap;
-    top: -10%;
-    left: 70%;
-}
-
-/* Cuori rotanti ai lati */
-.hearts-bg-rotating {
-    position: fixed;
-    top: 50%;
-    left: 5%;
-    font-size: 3rem;
-    opacity: 0.1;
-    animation: rotateHeart 8s ease-in-out infinite;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.hearts-bg-rotating::before {
-    content: '💖';
-}
-
-.hearts-bg-rotating-right {
-    position: fixed;
-    top: 30%;
-    right: 5%;
-    font-size: 2.5rem;
-    opacity: 0.12;
-    animation: rotateHeartReverse 10s ease-in-out infinite;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.hearts-bg-rotating-right::before {
-    content: '💝';
-}
-
-/* Cuori pulsanti sparsi */
-.hearts-pulse {
-    position: fixed;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.hearts-pulse::before {
-    content: '💕';
-    position: absolute;
-    font-size: 1.2rem;
-    opacity: 0.15;
-    animation: pulseHeart 3s ease-in-out infinite;
-    top: 20%;
-    left: 15%;
-}
-
-.hearts-pulse::after {
-    content: '💗';
-    position: absolute;
-    font-size: 1.4rem;
-    opacity: 0.15;
-    animation: pulseHeart 3.5s ease-in-out infinite;
-    animation-delay: 1s;
-    bottom: 25%;
-    right: 20%;
-}
-
-/* ANIMAZIONI */
 @keyframes floatHearts {
     from { transform: translateY(0); opacity: 0.15; }
     to { transform: translateY(-110vh); opacity: 0; }
-}
-
-@keyframes fallHearts {
-    from { 
-        transform: translateY(0) rotate(0deg); 
-        opacity: 0.2; 
-    }
-    to { 
-        transform: translateY(110vh) rotate(360deg); 
-        opacity: 0; 
-    }
-}
-
-@keyframes rotateHeart {
-    0%, 100% { 
-        transform: rotate(0deg) scale(1); 
-        opacity: 0.1; 
-    }
-    50% { 
-        transform: rotate(180deg) scale(1.2); 
-        opacity: 0.15; 
-    }
-}
-
-@keyframes rotateHeartReverse {
-    0%, 100% { 
-        transform: rotate(360deg) scale(1); 
-        opacity: 0.12; 
-    }
-    50% { 
-        transform: rotate(180deg) scale(1.3); 
-        opacity: 0.18; 
-    }
-}
-
-@keyframes pulseHeart {
-    0%, 100% { 
-        transform: scale(1); 
-        opacity: 0.15; 
-    }
-    50% { 
-        transform: scale(1.4); 
-        opacity: 0.25; 
-    }
 }
 
 .container {
