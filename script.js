@@ -15,9 +15,9 @@ const noMessages = [
     "Pecchèè... 🥺",
     "Se dici di no, sarò davvero triste...",
     "Sarò tristissimo... 😢",
-    "Ti prego??? 💔",
-    "Non farmi questo...",
-    "Ultima possibilità! 😭",
+    //"Ti prego??? 💔",
+   //"Non farmi questo...",
+    //"Ultima possibilità! 😭",
     "EHEHEHHEHE 😜"
 ]
 
