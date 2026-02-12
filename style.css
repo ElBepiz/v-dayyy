@@ -183,8 +183,8 @@ h1 {
 }
 
 @keyframes bounceTitle {
-    from { transform: translateY(0) rotate(-1deg); }
-    to { transform: translateY(-12px) rotate(1deg); }
+    from { transform: translateY(0); }
+    to { transform: translateY(-12px); }
 }
 
 .yes-message {
