@@ -13,8 +13,8 @@ const noMessages = [
     "No",
     "Sei sicura? 🤔",
     "Pecchèè... 🥺",
-    "Se dici di no, sarò davvero triste...",
-    "Sarò tristissimo... 😢",
+    "Pecchè continui a dire di nooo...",
+    "Sei cattivaaaaaa... 😢",
     "EHEHEHHEHE 😜"
     //"Ti prego??? 💔",
    //"Non farmi questo...",
